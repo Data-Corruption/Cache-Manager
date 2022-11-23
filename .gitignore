@@ -1,0 +1,8 @@
+.env
+Cache-Manager/node_modules/
+
+Cache-Manager/design document.txt
+
+Cache-Manager/reminders.json
+
+Cache-Manager/config.json

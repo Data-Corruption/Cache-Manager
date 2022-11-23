@@ -1,0 +1,42 @@
+== Cache Manager
+// aka Catherine 
+a basic discord bot
+
+.Commands
+[cols="~,~,75"]
+|====
+|*Name* |*Type* |*Description*
+|archive |Message |sends a copy of the target message to an archive channel.
+|find    |Chat    |pretends to finds stuff for you, sends memes instead.
+|help    |Chat    |lists the bot's commands and links the github repo.
+|music   |Chat    |links the server's music playlists that are automatically synced to a channel.
+|ping    |Chat    |simple ping command for testing connection.
+|poll    |Chat    |creates a poll.
+|sync    |Chat    |links the server's synctube room.
+|====
+
+Config file example for 1 server with all commands enabled
+
+.config.json
+[source,json]
+----
+{
+    "log":true,
+    "update_commands":true,
+    "discord_token":"example_token",
+    "guild_whitelist":[
+        {
+            "id":"example_server_id",
+            "command_whitelist":["archive", "find", "help", "music", "ping", "poll", "sync"],
+            "archive_channel_id":"example_archive_channel_id",
+            "music_channel_id":"example_music_channel_id",
+            "synctube_room_url":"example_url",
+            "youtube_playlist_url":"example_url",
+            "soundcloud_playlist_url":"example_url"
+        }
+    ],
+    "administrator_whitelist":[
+        "example_user_id", 
+    ]
+}
+----
